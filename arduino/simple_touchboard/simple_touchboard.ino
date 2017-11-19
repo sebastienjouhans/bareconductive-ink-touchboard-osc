@@ -95,14 +95,8 @@ void loop()
     MPR121.updateTouchData();
     for(int i=0; i<numElectrodes; i++){
       if(MPR121.isNewTouch(i)){
-        //Serial.print("electrode ");
-        //Serial.print(i, DEC);
-        //Serial.println(" was just touched");  
         Serial.println('r');  
       } else if(MPR121.isNewRelease(i)){
-        //Serial.print("electrode ");
-        //Serial.print(i, DEC);
-        //Serial.println(" was just released"); 
         Serial.println('R');   
       }
     } 
